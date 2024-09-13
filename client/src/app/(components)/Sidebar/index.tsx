@@ -15,6 +15,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import Image from "next/image";
 
 interface SidebarLinkProps {
   href: string;
@@ -68,7 +69,13 @@ const Sidebar = () => {
         className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}>
-        <div>logo</div>
+        <Image
+          src="https://s3-1nvet0r1manag3ment.s3.eu-central-1.amazonaws.com/logo.png"
+          alt="logo"
+          width={27}
+          height={27}
+          className="rounded-full w-8"
+        />
         {!isSidebarCollapsed && <h1 className="font-extrabold text-2xl">EDSTOCK</h1>}
 
         <button
